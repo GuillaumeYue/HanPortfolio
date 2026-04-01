@@ -24,7 +24,7 @@ function Hero() {
           </a>
 
           <a
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             className="rounded-lg border border-black px-5 py-3 text-black transition hover:bg-gray-100"
           >
             Download Resume
