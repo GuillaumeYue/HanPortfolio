@@ -47,42 +47,42 @@ function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <>
-      <article className="rounded-2xl border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+      <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-emerald-500/40 hover:bg-slate-900">
         <button
           type="button"
           onClick={() => openPreview(0)}
-          className="mb-5 block w-full"
+          className="mb-5 block w-full overflow-hidden rounded-xl border border-slate-800"
           aria-label={`Preview screenshots for ${project.title}`}
         >
           <img
             src={project.coverImage}
             alt={`${project.title} screenshot`}
             loading="lazy"
-            className="h-48 w-full rounded-xl object-cover"
+            className="h-48 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
           />
         </button>
 
-        <h3 className="text-xl font-semibold">{project.title}</h3>
+        <h3 className="text-xl font-semibold text-white">{project.title}</h3>
 
-        <p className="mt-3 leading-7 text-gray-600">{project.description}</p>
+        <p className="mt-3 leading-7 text-slate-400">{project.description}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tech.map((item) => (
             <span
               key={item}
-              className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700"
+              className="rounded-full border border-slate-700 bg-slate-950/60 px-3 py-1 text-xs font-medium text-slate-300"
             >
               {item}
             </span>
           ))}
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-4 text-sm font-medium">
+        <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-slate-300">
           <a
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            className="transition hover:text-gray-500"
+            className="transition hover:text-emerald-400"
           >
             GitHub
           </a>
@@ -90,7 +90,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           <button
             type="button"
             onClick={() => openPreview(0)}
-            className="transition hover:text-gray-500"
+            className="transition hover:text-emerald-400"
           >
             Screenshots ({totalImages})
           </button>
@@ -100,7 +100,7 @@ function ProjectCard({ project }: ProjectCardProps) {
               href={project.demo}
               target="_blank"
               rel="noreferrer"
-              className="transition hover:text-gray-500"
+              className="transition hover:text-emerald-400"
             >
               Live Demo
             </a>
@@ -110,21 +110,21 @@ function ProjectCard({ project }: ProjectCardProps) {
 
       {isPreviewOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
           onClick={closePreview}
         >
           <div
-            className="w-full max-w-5xl rounded-xl bg-white p-4 md:p-6"
+            className="w-full max-w-5xl rounded-xl border border-slate-800 bg-slate-900 p-4 md:p-6"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="mb-4 flex items-center justify-between">
-              <p className="text-sm text-gray-600">
-                {project.title} - {activeImageIndex + 1} / {totalImages}
+              <p className="text-sm text-slate-400">
+                {project.title} — {activeImageIndex + 1} / {totalImages}
               </p>
               <button
                 type="button"
                 onClick={closePreview}
-                className="rounded-md border px-3 py-1 text-sm hover:bg-gray-50"
+                className="rounded-md border border-slate-700 px-3 py-1 text-sm text-slate-200 hover:bg-slate-800"
               >
                 Close
               </button>
@@ -140,14 +140,14 @@ function ProjectCard({ project }: ProjectCardProps) {
               <button
                 type="button"
                 onClick={showPrevImage}
-                className="rounded-md border px-3 py-1 text-sm hover:bg-gray-50"
+                className="rounded-md border border-slate-700 px-3 py-1 text-sm text-slate-200 hover:bg-slate-800"
               >
                 Prev
               </button>
               <button
                 type="button"
                 onClick={showNextImage}
-                className="rounded-md border px-3 py-1 text-sm hover:bg-gray-50"
+                className="rounded-md border border-slate-700 px-3 py-1 text-sm text-slate-200 hover:bg-slate-800"
               >
                 Next
               </button>
