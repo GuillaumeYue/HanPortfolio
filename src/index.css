@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------ */
+/*  Global element defaults                                            */
+/* ------------------------------------------------------------------ */
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,6 +20,81 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Form autofill fix in dark theme */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #e2e8f0;
+  -webkit-box-shadow: 0 0 0px 1000px #0f1a2e inset;
+  caret-color: #e2e8f0;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Reusable component classes                                         */
+/*  Encode cross-cutting visual patterns as semantic class names.      */
+/*  Layout (flex/grid/spacing) stays inline in JSX with utilities.     */
+/* ------------------------------------------------------------------ */
+
+@layer components {
+  /* ---- Buttons ---- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl
+           bg-gradient-to-r from-blue-500 to-violet-500
+           px-7 py-3 text-sm font-semibold text-white
+           shadow-lg shadow-blue-500/30 transition
+           hover:from-blue-400 hover:to-violet-400
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl
+           border border-slate-700 bg-slate-100 px-7 py-3
+           text-sm font-semibold text-slate-900 transition hover:bg-white
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300/50;
+  }
+
+  /* ---- Cards ---- */
+  .card-dark {
+    @apply rounded-2xl border border-slate-800 bg-slate-900/60 transition
+           hover:border-blue-500/40 hover:bg-slate-900;
+  }
+
+  /* ---- Pills / tags ---- */
+  .pill {
+    @apply inline-flex items-center rounded-full border border-slate-700
+           bg-slate-950/60 px-3 py-1 text-sm text-slate-300;
+  }
+
+  /* ---- Inputs ---- */
+  .input-dark {
+    @apply w-full rounded-lg border border-slate-700 bg-slate-950/60
+           px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500
+           transition focus:border-blue-500/60 focus:outline-none
+           focus:ring-2 focus:ring-blue-500/30;
+  }
+
+  /* ---- Section padding ---- */
+  .section-pad {
+    @apply scroll-mt-24 px-6 py-24 md:px-12 md:py-28;
+  }
+
+  /* ---- Section heading divider ---- */
+  .section-divider {
+    @apply mx-auto mt-4 block h-1 w-20 rounded-full
+           bg-gradient-to-r from-blue-500 to-violet-500;
+  }
+
+  /* ---- Round icon button (social, etc.) ---- */
+  .icon-button {
+    @apply grid h-12 w-12 place-items-center rounded-xl border border-slate-800
+           bg-slate-900/60 text-slate-300 transition
+           hover:border-blue-500/40 hover:text-blue-400;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Custom decorative effects                                          */
+/* ------------------------------------------------------------------ */
+
 /* Decorative + grid background used in Hero */
 .bg-plus-grid {
   background-color: #060b18;
@@ -24,11 +103,11 @@ body {
   background-position: 0 0;
 }
 
-/* Subtle radial vignette to deepen edges in dark sections */
+/* Subtle radial vignette to add depth in dark sections */
 .vignette {
   background-image:
-    radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08), transparent 60%),
-    radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.06), transparent 60%);
+    radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.12), transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.10), transparent 60%);
 }
 
 /* Animated mouse scroll dot */
@@ -48,12 +127,4 @@ body {
 
 .animate-scroll-dot {
   animation: scroll-dot 1.6s ease-in-out infinite;
-}
-
-/* Form autofill fix in dark theme */
-input:-webkit-autofill,
-textarea:-webkit-autofill {
-  -webkit-text-fill-color: #e2e8f0;
-  -webkit-box-shadow: 0 0 0px 1000px #0f1a2e inset;
-  caret-color: #e2e8f0;
 }
