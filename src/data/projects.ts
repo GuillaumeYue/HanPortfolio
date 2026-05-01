@@ -12,6 +12,27 @@ const base = import.meta.env.BASE_URL
 
 export const projects: Project[] = [
   {
+    title: 'QuickBite',
+    description:
+      'A full-stack restaurant ordering web app with real-time order tracking, role-based access for customers and staff, and live kitchen updates over WebSocket.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'JWT'],
+    github: 'https://github.com/GuillaumeYue/Quickbite',
+    demo: '',
+    coverImage: `${base}projects/QuickBite-Landing.png`,
+    images: [
+      `${base}projects/QuickBite-Landing.png`,
+      `${base}projects/QuickBite-Menu.png`,
+      `${base}projects/QuickBite-ItemDrawer.png`,
+      `${base}projects/QuickBite-MyOrders.png`,
+      `${base}projects/QuickBite-OrderDetail.png`,
+      `${base}projects/QuickBite-StaffOrders.png`,
+      `${base}projects/QuickBite-StaffMenu.png`,
+      `${base}projects/QuickBite-AddItem.png`,
+      `${base}projects/QuickBite-Login.png`,
+      `${base}projects/QuickBite-Signup.png`,
+    ],
+  },
+  {
     title: 'LoongEDeviceShop',
     description: 'A web application for electrical devices shopping.',
     tech: ['React', 'Node.js', 'MongoDB', 'Express.js'],
