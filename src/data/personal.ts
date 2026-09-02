@@ -3,7 +3,7 @@ export const personal = {
   greeting: "Hi, I'm",
   role: 'Full Stack Developer',
   tagline:
-    'Computer Science student passionate about full-stack development, mobile apps, and building clean, modern user experiences. Driven by clean code and great UX.',
+    'Junior developer with experience in full-stack and mobile development — React, TypeScript, Node.js, and SwiftUI. Focused on real-time systems, clean architecture, and polished user experiences.',
   email: 'alexyuehan@gmail.com',
   github: 'https://github.com/GuillaumeYue',
   githubHandle: '@GuillaumeYue',
@@ -13,8 +13,8 @@ export const personal = {
 
 export const aboutContent = {
   paragraphs: [
-    "I'm a Computer Science student in Montreal with hands-on experience building web, mobile, and full-stack applications. I love turning ideas into clean, modern user experiences.",
-    "My toolbox spans React, TypeScript, SwiftUI, ASP.NET, Firebase, and SQL-based systems. I'm always looking to pick up new tools and ship things that feel polished end-to-end.",
+    "I'm a Computer Science student in Montreal with hands-on experience building full-stack web and native mobile applications. I love turning ideas into clean, modern user experiences.",
+    "My stack spans React, TypeScript, Node.js, SwiftUI (Swift 6 strict concurrency), and distributed backend systems with PostgreSQL and Redis. I focus on real-time systems, clean architecture, and shipping things that feel polished end-to-end.",
   ],
   stats: [
     { label: 'Featured Projects', value: '4+', icon: 'briefcase' as const },

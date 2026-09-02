@@ -39,19 +39,25 @@ function ProjectCard({ project }: ProjectCardProps) {
   return (
     <>
       <article className="card-dark group overflow-hidden p-6 hover:-translate-y-1">
-        <button
-          type="button"
-          onClick={() => openPreview(0)}
-          className="mb-5 block w-full overflow-hidden rounded-xl border border-slate-800"
-          aria-label={`Preview screenshots for ${project.title}`}
-        >
-          <img
-            src={project.coverImage}
-            alt={`${project.title} screenshot`}
-            loading="lazy"
-            className="h-48 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-          />
-        </button>
+        {project.coverImage ? (
+          <button
+            type="button"
+            onClick={() => openPreview(0)}
+            className="mb-5 block w-full overflow-hidden rounded-xl border border-slate-800"
+            aria-label={`Preview screenshots for ${project.title}`}
+          >
+            <img
+              src={project.coverImage}
+              alt={`${project.title} screenshot`}
+              loading="lazy"
+              className="h-48 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+            />
+          </button>
+        ) : (
+          <div className="mb-5 flex h-48 w-full items-center justify-center rounded-xl border border-slate-800 bg-slate-900/60 text-slate-600 text-sm tracking-wide uppercase">
+            Screenshots coming soon
+          </div>
+        )}
 
         <h3 className="text-xl font-semibold text-white">{project.title}</h3>
         <p className="mt-3 leading-7 text-slate-400">{project.description}</p>
@@ -63,22 +69,26 @@ function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-slate-300">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="transition hover:text-blue-400"
-          >
-            GitHub
-          </a>
+          {project.github ? (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-blue-400"
+            >
+              GitHub
+            </a>
+          ) : null}
 
-          <button
-            type="button"
-            onClick={() => openPreview(0)}
-            className="transition hover:text-blue-400"
-          >
-            Screenshots ({totalImages})
-          </button>
+          {totalImages > 0 ? (
+            <button
+              type="button"
+              onClick={() => openPreview(0)}
+              className="transition hover:text-blue-400"
+            >
+              Screenshots ({totalImages})
+            </button>
+          ) : null}
 
           {project.demo ? (
             <a
