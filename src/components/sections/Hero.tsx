@@ -57,7 +57,7 @@ function Hero() {
           aria-label="Scroll to about"
           className="mt-16 inline-flex items-center justify-center text-slate-500 transition hover:text-blue-400"
         >
-          <span className="grid h-10 w-6 place-items-start rounded-full border border-slate-600 pt-2">
+          <span className="flex h-10 w-6 flex-col items-center rounded-full border border-slate-600 pt-2">
             <span className="h-2 w-1 rounded-full bg-current animate-scroll-dot" />
           </span>
         </a>
