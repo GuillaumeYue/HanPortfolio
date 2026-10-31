@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- grid pattern -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="75" x2="800" y2="75"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="100" y1="0" x2="100" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="300" y1="0" x2="300" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="500" y1="0" x2="500" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+  </g>
+
+  <!-- glow orb -->
+  <circle cx="400" cy="225" r="140" fill="#7c3aed" opacity="0.06" filter="url(#glow)"/>
+
+  <!-- accent bar -->
+  <rect x="320" y="162" width="160" height="3" rx="2" fill="url(#accent)" opacity="0.9"/>
+
+  <!-- title -->
+  <text x="400" y="220" text-anchor="middle" fill="#f1f5f9"
+    font-size="36" font-weight="700"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    letter-spacing="0.5">RAG Eval Suite</text>
+
+  <!-- subtitle -->
+  <text x="400" y="258" text-anchor="middle" fill="#94a3b8"
+    font-size="15" font-family="ui-monospace, 'SF Mono', monospace">
+    LLM Evaluation · Red-team · CI Pipeline
+  </text>
+
+  <!-- tech pills -->
+  <g font-size="12" font-family="ui-monospace, 'SF Mono', monospace" fill="#7c3aed">
+    <rect x="178" y="290" width="72" height="24" rx="12" fill="#7c3aed" opacity="0.15"/>
+    <text x="214" y="306" text-anchor="middle" fill="#a78bfa">Python</text>
+
+    <rect x="262" y="290" width="72" height="24" rx="12" fill="#2563eb" opacity="0.15"/>
+    <text x="298" y="306" text-anchor="middle" fill="#60a5fa">FastAPI</text>
+
+    <rect x="346" y="290" width="96" height="24" rx="12" fill="#7c3aed" opacity="0.15"/>
+    <text x="394" y="306" text-anchor="middle" fill="#a78bfa">pgvector</text>
+
+    <rect x="454" y="290" width="88" height="24" rx="12" fill="#059669" opacity="0.15"/>
+    <text x="498" y="306" text-anchor="middle" fill="#34d399">Claude API</text>
+
+    <rect x="554" y="290" width="82" height="24" rx="12" fill="#d97706" opacity="0.15"/>
+    <text x="595" y="306" text-anchor="middle" fill="#fbbf24">promptfoo</text>
+  </g>
+</svg>
