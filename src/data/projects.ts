@@ -12,11 +12,23 @@ const base = import.meta.env.BASE_URL
 
 export const projects: Project[] = [
   {
+    title: 'RAG Eval Suite',
+    description:
+      'An LLM evaluation and red-team suite for a RAG assistant. Automates LLM-as-judge scoring, adversarial prompt injection probes, jailbreak attempts, and PII / data-leak detection. CI runs the full suite on every PR and posts a markdown report. Found and fixed a cross-tenant data leak in the retrieval layer.',
+    tech: ['Python', 'FastAPI', 'PostgreSQL', 'pgvector', 'Claude API', 'React', 'GitHub Actions', 'promptfoo'],
+    github: 'https://github.com/GuillaumeYue/loi25-rag-eval',
+    demo: '',
+    coverImage: `${base}projects/RAGEval-Cover.svg`,
+    images: [
+      `${base}projects/RAGEval-Cover.svg`,
+    ],
+  },
+  {
     title: 'Huddle',
     description:
-      'A real-time group decision iOS app — groups join a room by code, swipe on nearby restaurants (Google Places), and a game-show reveal surfaces the unanimous pick. Built with Swift 6 strict concurrency and a distributed TypeScript backend; verified correct across concurrent server processes with ~70 automated checks.',
-    tech: ['Swift 6', 'SwiftUI', 'TypeScript', 'Node.js', 'Express', 'WebSocket', 'PostgreSQL', 'Redis'],
-    github: '',
+      'A real-time group decision iOS app — groups join a room by code, swipe on nearby restaurants (Google Places), and a game-show reveal surfaces the unanimous pick. Built with Swift 6 strict concurrency and a distributed TypeScript backend deployed on AWS (EC2 + RDS, Caddy HTTPS); verified correct across concurrent server processes with ~70 automated checks.',
+    tech: ['Swift 6', 'SwiftUI', 'TypeScript', 'Node.js', 'Express', 'WebSocket', 'PostgreSQL', 'Redis', 'Docker', 'AWS'],
+    github: 'https://github.com/GuillaumeYue/Huddle',
     demo: '',
     coverImage: `${base}projects/Huddle-SwipeDeck.png`,
     images: [
@@ -27,11 +39,11 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: 'Wild Natural',
+    title: 'Balade Bucolique',
     description:
-      'A full-stack e-commerce platform for Wild Natural, a botanical skincare brand. Customers can browse the catalog, manage a cart, check out with Stripe, and book personalized product customization appointments. Includes an admin dashboard for orders, products, promo codes, and customization requests.',
+      'A full-stack e-commerce platform for Balade Bucolique (formerly Wild Natural), a Montreal botanical skincare brand. Built in a 4-person team — customers can browse the catalog, manage a cart, check out with Stripe, and book personalized product customization appointments. Includes an admin dashboard for orders, products, promo codes, and customization requests.',
     tech: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Stripe'],
-    github: '',
+    github: 'https://github.com/GuillaumeYue/WildNatural',
     demo: '',
     coverImage: `${base}projects/WildNatural-Home.png`,
     images: [

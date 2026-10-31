@@ -3,7 +3,7 @@ export const personal = {
   greeting: "Hi, I'm",
   role: 'Full Stack Developer',
   tagline:
-    'Junior developer with experience in full-stack and mobile development — React, TypeScript, Node.js, and SwiftUI. Focused on real-time systems, clean architecture, and polished user experiences.',
+    'Junior full-stack developer working in TypeScript, React, Node.js, Python and PostgreSQL. Built a real-time iOS app deployed on AWS, an e-commerce platform for a Montreal skincare brand, and an LLM evaluation suite that found and fixed a data leak in a RAG assistant.',
   email: 'alexyuehan@gmail.com',
   github: 'https://github.com/GuillaumeYue',
   githubHandle: '@GuillaumeYue',
@@ -13,12 +13,12 @@ export const personal = {
 
 export const aboutContent = {
   paragraphs: [
-    "I'm a Computer Science student in Montreal with hands-on experience building full-stack web and native mobile applications. I love turning ideas into clean, modern user experiences.",
-    "My stack spans React, TypeScript, Node.js, SwiftUI (Swift 6 strict concurrency), and distributed backend systems with PostgreSQL and Redis. I focus on real-time systems, clean architecture, and shipping things that feel polished end-to-end.",
+    "I'm a Computer Science student in Montreal with hands-on experience building full-stack web, native mobile, and AI-backed applications. I love turning ideas into clean, modern user experiences.",
+    "My stack spans React, TypeScript, Node.js, Python, FastAPI, SwiftUI (Swift 6 strict concurrency), and distributed backend systems with PostgreSQL and Redis. I work on real-time systems, LLM evaluation, and shipping things that feel polished end-to-end.",
   ],
   stats: [
-    { label: 'Featured Projects', value: '4+', icon: 'briefcase' as const },
-    { label: 'Technologies & Tools', value: '15+', icon: 'layers' as const },
+    { label: 'Featured Projects', value: '5+', icon: 'briefcase' as const },
+    { label: 'Technologies & Tools', value: '20+', icon: 'layers' as const },
   ],
 }
 
