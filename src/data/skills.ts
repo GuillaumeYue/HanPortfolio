@@ -41,16 +41,23 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: 'Mobile Development',
-    items: ['Swift 6', 'SwiftUI', 'iOS (Xcode)', 'Android (Java)'],
+    items: ['Swift 6', 'SwiftUI', 'iOS (Xcode)', 'Android (Java)', 'Android Studio'],
     icon: 'phone',
     iconColor: 'text-pink-400',
     iconBg: 'bg-pink-500/10',
   },
   {
     title: 'Tools & Platforms',
-    items: ['Docker', 'AWS (EC2, RDS)', 'GitHub Actions', 'Vercel', 'Git', 'Google Cloud'],
+    items: ['Docker', 'AWS (EC2, RDS)', 'GitHub Actions', 'Vercel', 'Git', 'GitHub', 'Google Cloud', 'VS Code'],
     icon: 'tool',
     iconColor: 'text-orange-400',
     iconBg: 'bg-orange-500/10',
+  },
+  {
+    title: 'Other Skills',
+    items: ['REST APIs', 'WebSocket', 'Real-time Systems', 'Responsive Design'],
+    icon: 'globe',
+    iconColor: 'text-cyan-400',
+    iconBg: 'bg-cyan-500/10',
   },
 ]

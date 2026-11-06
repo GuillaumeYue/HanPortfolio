@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     title: 'RAG Eval Suite',
     description:
-      'An LLM evaluation and red-team suite for a RAG assistant. Automates LLM-as-judge scoring, adversarial prompt injection probes, jailbreak attempts, and PII / data-leak detection. CI runs the full suite on every PR and posts a markdown report. Found and fixed a cross-tenant data leak in the retrieval layer.',
+      "An LLM evaluation and red-team suite, with a RAG assistant over Quebec's privacy law (Loi 25) as the test subject: 40 accuracy cases scored by an LLM judge and 26 OWASP-tagged red-team cases, run against a baseline and 4 mitigations. Found that the baseline served a confidential internal note to public users; filtering by classification in the retrieval query fixed it with no loss of accuracy. CI runs lint and tests on every push.",
     tech: ['Python', 'FastAPI', 'PostgreSQL', 'pgvector', 'Claude API', 'React', 'GitHub Actions', 'promptfoo'],
     github: 'https://github.com/GuillaumeYue/loi25-rag-eval',
     demo: '',
